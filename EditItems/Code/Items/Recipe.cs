@@ -12,6 +12,7 @@ namespace Assets.Items
         public int ExperienceGain { get;  set; }
         public List<Reagent> Reagents { get;  set; }
         public List<Result> Results { get;  set; }
+        public int minPlayersLevel { get; set; }
         
         public Recipe()
         {

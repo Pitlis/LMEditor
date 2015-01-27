@@ -49,8 +49,10 @@
         <Button Content="Удалить выбранный" Grid.Column="1" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="125" Height="21" Click="btnDeleteItem"/>
         <Button Content="Добавить" Grid.Column="1" HorizontalAlignment="Left" Margin="378,284,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="btnAddItemResult"/>
         <Button Content="Удалить выбранный" Grid.Column="1" HorizontalAlignment="Left" Margin="248,287,0,0" VerticalAlignment="Top" Width="125" Height="21" Click="btnDeleteItemResult"/>
-        <TextBox Name="txtO" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="248,143,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <Label Content="Опыт" Grid.Column="1" HorizontalAlignment="Left" Margin="248,112,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.132,0.192"/>
+        <TextBox Name="txtO" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="239,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Опыт" Grid.Column="1" HorizontalAlignment="Left" Margin="378,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.132,0.192"/>
         <Label Content="Результаты" Grid.Column="1" HorizontalAlignment="Left" Margin="248,255,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="-0.042,0.615" Height="25"/>
+        <TextBox x:Name="txtLevel" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="239,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Уровень" Grid.Column="1" HorizontalAlignment="Left" Margin="378,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.132,0.192"/>
     </Grid>
 </Window>

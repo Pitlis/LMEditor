@@ -61,6 +61,7 @@ namespace EditItems
             recipDescr.Clear();
             recipPrice.Clear();
             txtO.Clear();
+            txtLevel.Clear();
             reagents = new List<Recipe.Reagent>();
             results = new List<Recipe.Result>();
             UpdateReagentsList();
@@ -106,16 +107,21 @@ namespace EditItems
                 op = Int32.Parse(txtO.Text);
             }
             catch{ op = 0;}
-
+            int minLevel = 0;
+            try
+            {
+                minLevel = Int32.Parse(txtLevel.Text);
+            }
+            catch{minLevel = 1;}
             try
             {
                 if (RecipeIndex == -1)
                 {
-                    fileItems.recipes.AddItem(recipName.Text, recipDescr.Text, price, reagents, results, op);
+                    fileItems.recipes.AddItem(recipName.Text, recipDescr.Text, price, reagents, results, op, minLevel);
                 }
                 else
                 {
-                    fileItems.recipes.Edit(((KeyValuePair<int, string>)ListRecipes.SelectedItem).Key, recipName.Text, recipDescr.Text, price, reagents, results, op);
+                    fileItems.recipes.Edit(((KeyValuePair<int, string>)ListRecipes.SelectedItem).Key, recipName.Text, recipDescr.Text, price, reagents, results, op, minLevel);
                 }
                 FileItems.SaveFile(fileItems);
             }
@@ -194,6 +200,7 @@ namespace EditItems
                 recipDescr.Text = recipe.Description;
                 recipPrice.Text = recipe.Price.ToString();
                 txtO.Text = recipe.ExperienceGain.ToString();
+                txtLevel.Text = recipe.minPlayersLevel.ToString();
 
                 results = recipe.Results;
                 reagents = recipe.Reagents;
