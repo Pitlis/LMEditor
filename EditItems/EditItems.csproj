@@ -53,16 +53,32 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="AddItemForLocation.xaml.cs">
+      <DependentUpon>AddItemForLocation.xaml</DependentUpon>
+    </Compile>
     <Compile Include="AddReagent.xaml.cs">
       <DependentUpon>AddReagent.xaml</DependentUpon>
     </Compile>
     <Compile Include="AddResult.xaml.cs">
       <DependentUpon>AddResult.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Code\fileLocations.cs" />
+    <Compile Include="Code\Locations.cs" />
+    <Compile Include="Code\Location\Location.cs" />
     <Compile Include="Code\Recipes.cs" />
+    <Compile Include="LocationEditorFiles1.xaml.cs">
+      <DependentUpon>LocationEditorFiles1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LocationsEditor.xaml.cs">
+      <DependentUpon>LocationsEditor.xaml</DependentUpon>
+    </Compile>
     <Compile Include="RecipeEditor.xaml.cs">
       <DependentUpon>RecipeEditor.xaml</DependentUpon>
     </Compile>
+    <Page Include="AddItemForLocation.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="AddReagent.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +88,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ItemEditor.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LocationEditorFiles1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LocationsEditor.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

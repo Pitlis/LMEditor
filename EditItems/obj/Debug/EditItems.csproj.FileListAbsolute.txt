@@ -40,3 +40,9 @@ E:\LMEditor\EditItems\obj\Debug\EditItems_MarkupCompile.cache
 E:\LMEditor\EditItems\obj\Debug\EditItems.g.resources
 E:\LMEditor\EditItems\obj\Debug\EditItems.Properties.Resources.resources
 E:\LMEditor\EditItems\obj\Debug\EditItems.csproj.GenerateResource.Cache
+E:\LMEditor\EditItems\obj\Debug\LocationEditorFiles1.baml
+E:\LMEditor\EditItems\obj\Debug\LocationsEditor.baml
+E:\LMEditor\EditItems\obj\Debug\LocationEditorFiles1.g.cs
+E:\LMEditor\EditItems\obj\Debug\LocationsEditor.g.cs
+E:\LMEditor\EditItems\obj\Debug\AddItemForLocation.baml
+E:\LMEditor\EditItems\obj\Debug\AddItemForLocation.g.cs

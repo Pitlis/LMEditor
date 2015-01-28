@@ -1,0 +1,53 @@
+﻿<Window x:Class="EditItems.LocationsEditor"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Редактор мест сбора ингредиентов" Height="601" Width="704">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="184*"/>
+            <ColumnDefinition Width="383*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Column="0" Name="ListLocations" HorizontalAlignment="Left" Height="560" VerticalAlignment="Top" Width="217" MinWidth="180" MinHeight="300" SelectionChanged="ListLocation_SelectionChanged">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="180" DisplayMemberBinding="{Binding Value}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Button Content="Создать" Grid.Column="1" HorizontalAlignment="Left" Margin="378,10,0,0" VerticalAlignment="Top" Width="75" Height="56" Click="btnCreate"/>
+        <Button Content="Сохранить" Grid.Column="1" HorizontalAlignment="Left" Margin="368,538,0,0" VerticalAlignment="Top" Width="85" Height="22" Click="btnSave"/>
+        <Button Content="Удалить" Grid.Column="1" HorizontalAlignment="Left" Margin="270,538,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.067,0.136" Click="btnRemove" Height="21"/>
+        <TextBox Name="locationName" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,27,0,0" TextWrapping="Wrap" Text="defaultName" VerticalAlignment="Top" Width="211"/>
+        <TextBox Name="locationDescr" Grid.Column="1" HorizontalAlignment="Left" Height="137" Margin="10,64,0,0" TextWrapping="Wrap" Text="defaultDescription" VerticalAlignment="Top" Width="211"/>
+        <Label Content="Название" Grid.Column="1" HorizontalAlignment="Left" Margin="239,24,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Описание" Grid.Column="1" HorizontalAlignment="Left" Margin="239,64,0,0" VerticalAlignment="Top" Width="75"/>
+
+        <ListView Name="listItems" Grid.Column="1" HorizontalAlignment="Left" Height="206" Margin="10,311,0,0" VerticalAlignment="Top" Width="205">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="160" DisplayMemberBinding="{Binding item.Name}" />
+                    <GridViewColumn Width="30" DisplayMemberBinding="{Binding Probabilitys}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <Label Content="Предметы на локации" Grid.Column="1" HorizontalAlignment="Left" Margin="10,255,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="-0.042,0.615" Height="25"/>
+        <Button Content="Добавить" Grid.Column="1" HorizontalAlignment="Left" Margin="140,284,0,0" VerticalAlignment="Top" Width="75" Height="24" Click="btnAddItem"/>
+        <Button Content="Удалить выбранный" Grid.Column="1" HorizontalAlignment="Left" Margin="10,285,0,0" VerticalAlignment="Top" Width="125" Height="21" Click="btnDeleteItem"/>
+        <TextBox Name="txtO" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="239,95,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="84"/>
+        <Label Content="Опыт при посещении" Grid.Column="1" HorizontalAlignment="Left" Margin="338,92,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.132,0.192" Width="132"/>
+        <TextBox x:Name="txtLevel" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="239,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="84"/>
+        <Label Content="Уровень для посещения" Grid.Column="1" HorizontalAlignment="Left" Margin="323,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.132,0.192"/>
+        <TextBox Name="txtSearchTime" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="239,178,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="84"/>
+        <Label Content="Время на локации" Grid.Column="1" HorizontalAlignment="Left" Margin="338,175,0,0" VerticalAlignment="Top" Width="115"/>
+        <TextBox Name="txtReputation" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="239,216,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="84"/>
+        <Label Content="Репутация &#xD;&#xA;у владельцев &#xD;&#xA;локации" Grid.Column="1" HorizontalAlignment="Left" Margin="338,216,0,0" VerticalAlignment="Top" Width="95" Height="64"/>
+        <ComboBox Name="cmbLevel" Grid.Column="1" HorizontalAlignment="Left" Margin="248,419,0,0" VerticalAlignment="Top" Width="56" SelectionChanged="cmbLevel_SelectionChanged"/>
+        <Label Content="Уровень игрока" Grid.Column="1" HorizontalAlignment="Left" Margin="323,415,0,0" VerticalAlignment="Top" Width="115"/>
+        <ComboBox Name="cmbTimeOfDay" Grid.Column="1" HorizontalAlignment="Left" Margin="248,284,0,0" VerticalAlignment="Top" Width="120"/>
+        <Label Content="Время,&#xD;&#xA;когда&#xD;&#xA;разрешено&#xD;&#xA;посещение&#xD;&#xA;локации" Grid.Column="1" HorizontalAlignment="Left" Margin="378,283,0,0" VerticalAlignment="Top" Width="75" Height="96"/>
+
+    </Grid>
+</Window>

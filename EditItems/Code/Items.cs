@@ -31,6 +31,10 @@ namespace EditItems.Code
         {
             return items[index];
         }
+        public Item GetItem(string name)
+        {
+            return items.Find(i => i.Name == name);
+        }
         public void RemoveItem(int index)
         {
             items.Remove(items[index]);
@@ -58,5 +62,7 @@ namespace EditItems.Code
             }
             return dict;
         }
+
+
     }
 }
