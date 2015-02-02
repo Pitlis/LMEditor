@@ -26,7 +26,7 @@
         <TextBox Name="recipPrice" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="10,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Название" Grid.Column="1" HorizontalAlignment="Left" Margin="239,24,0,0" VerticalAlignment="Top" Width="75"/>
         <Label Content="Описание" Grid.Column="1" HorizontalAlignment="Left" Margin="239,64,0,0" VerticalAlignment="Top" Width="75"/>
-        <Label Content="Цена" Grid.Column="1" HorizontalAlignment="Left" Margin="248,215,0,0" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Цена" Grid.Column="1" HorizontalAlignment="Left" Margin="130,215,0,0" VerticalAlignment="Top" Width="75"/>
 
         <ListView Name="listReagents" Grid.Column="1" HorizontalAlignment="Left" Height="206" Margin="10,311,0,0" VerticalAlignment="Top" Width="205" SelectionChanged="ListReagents_SelectionChanged">
             <ListView.View>
@@ -54,5 +54,7 @@
         <Label Content="Результаты" Grid.Column="1" HorizontalAlignment="Left" Margin="248,255,0,0" VerticalAlignment="Top" Width="165" RenderTransformOrigin="-0.042,0.615" Height="25"/>
         <TextBox x:Name="txtLevel" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="239,140,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
         <Label Content="Уровень" Grid.Column="1" HorizontalAlignment="Left" Margin="378,137,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.132,0.192"/>
+        <TextBox Name="txtTime" Grid.Column="1" HorizontalAlignment="Left" Height="23" Margin="239,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="75"/>
+        <Label Content="Время создания" Grid.Column="1" HorizontalAlignment="Left" Margin="348,218,0,0" VerticalAlignment="Top" Width="122"/>
     </Grid>
 </Window>

@@ -13,6 +13,7 @@ namespace Assets.Items
         public List<Reagent> Reagents { get;  set; }
         public List<Result> Results { get;  set; }
         public int minPlayersLevel { get; set; }
+        public int TimeToCreate { get; set; }
         
         public Recipe()
         {

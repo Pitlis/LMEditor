@@ -17,9 +17,9 @@ namespace EditItems.Code
             recipes = new List<Recipe>();
         }
 
-        public void AddItem(string name, string descr, int price, List<Recipe.Reagent> reagents, List<Recipe.Result> results, int experienceGain, int minLevel)
+        public void AddItem(string name, string descr, int price, List<Recipe.Reagent> reagents, List<Recipe.Result> results, int experienceGain, int minLevel, int time)
         {
-            Recipe recipe = new Recipe() { Name = name, Description = descr, Price = price, ExperienceGain = experienceGain, Results = results, Reagents = reagents, minPlayersLevel = minLevel};
+            Recipe recipe = new Recipe() { Name = name, Description = descr, Price = price, ExperienceGain = experienceGain, Results = results, Reagents = reagents, minPlayersLevel = minLevel, TimeToCreate = time};
             if (recipes.FindAll((i) => i.Name == name).Count != 0)
             {
                 throw new Exception("Имя рецепта уже используется!");
@@ -34,7 +34,7 @@ namespace EditItems.Code
         {
             recipes.Remove(recipes[index]);
         }
-        public void Edit(int index, string name, string descr, int price, List<Recipe.Reagent> reagents, List<Recipe.Result> results, int experienceGain, int minLevel)
+        public void Edit(int index, string name, string descr, int price, List<Recipe.Reagent> reagents, List<Recipe.Result> results, int experienceGain, int minLevel, int time)
         {
             int ind = recipes.FindIndex((i) => i.Name == name);
             if (ind != index && ind != -1)
@@ -47,6 +47,7 @@ namespace EditItems.Code
             recipes[index].Results = results;
             recipes[index].Reagents = reagents;
             recipes[index].minPlayersLevel = minLevel;
+            recipes[index].TimeToCreate = time;
         }
 
         public Dictionary<int, string> GetAllRecipes()
